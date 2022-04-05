@@ -35,14 +35,15 @@
                     android:textColor="#ffffff"
                     android:text="@string/rc_ac_file_send_preview"/>
             </LinearLayout>
+
             <TextView
                 android:id="@+id/rc_ad_tv_file_list_select_state"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:paddingRight="6dp"
-                android:textSize="14sp"
-                android:text="@string/rc_ad_send_file_no_select_file"/>
+                android:text="@string/rc_ad_send_file_no_select_file"
+                android:textSize="14sp" />
         </RelativeLayout>
 
 
