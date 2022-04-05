@@ -106,14 +106,14 @@ public class TestActivity extends AppCompatActivity {
         mFileTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TestActivity.this, SearchActivity.class);
+                Intent intent = new Intent(TestActivity.this, DivideActivity.class);
                 startActivity(intent);
             }
         });
         mMobileMemoryTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TestActivity.this, DivideActivity.class);
+                Intent intent = new Intent(TestActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
