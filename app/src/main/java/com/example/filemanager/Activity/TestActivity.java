@@ -103,11 +103,17 @@ public class TestActivity extends AppCompatActivity {
 
 
         //为button绑定事件
-
+        mFileTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TestActivity.this, SearchActivity.class);
+                startActivity(intent);
+            }
+        });
         mMobileMemoryTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TestActivity.this, MainActivity.class);
+                Intent intent = new Intent(TestActivity.this, DivideActivity.class);
                 startActivity(intent);
             }
         });
