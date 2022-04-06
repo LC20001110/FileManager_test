@@ -1,6 +1,7 @@
 package com.example.filemanager.Activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,28 +26,47 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.File;
 import java.util.ArrayList;
 
-public class DivideActivity extends BaseActivity {
+public class DivideActivity extends MainActivity {
 
     private AsyncTask searchTask = null;
+    String Password;
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getBundleInfo();
+    }
+    private void getBundleInfo() {
+        Bundle req=getIntent().getExtras();
+        //取出intent中附加的数据,通过 键值对 来传递
+        String a11=req.getString("a1");
+        String a22=req.getString("a2");
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        //setIntent(savedInstanceState);
+        Intent intent = getIntent(); //String data = intent.getStringExtra("extra_data");
+        Password = intent.getStringExtra("PassWord");
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(path);
 
         setSupportActionBar(toolbar);
         //添加默认的返回图标
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //设置返回键可用
         getSupportActionBar().setHomeButtonEnabled(true);
         EditText searchInput = findViewById(R.id.search_input);
-        searchInput.setVisibility(View.VISIBLE);
-
+        searchInput.setVisibility(View.INVISIBLE);
+        if(Password=="mFileTextView"){
+        search("doc");
+        search("txt");
+        }else{search("txt");}
         searchInput.setOnEditorActionListener((textView, i, keyEvent) -> {
             if (i == EditorInfo.IME_ACTION_SEARCH) {
-                search();
+
             }
             return true;
         });
@@ -55,14 +75,14 @@ public class DivideActivity extends BaseActivity {
         fab.setVisibility(View.GONE);
     }
 
-    @Override
+    /*@Override
     public void init() {
         super.init();
 
         RecyclerView recyclerView = findViewById(R.id.file_container);
         adapter = new FileViewAdapter(new ArrayList<>());
         recyclerView.setAdapter(adapter);
-    }
+    }*/
 
     @Override
     protected int getLayoutResourceId() {
@@ -71,9 +91,12 @@ public class DivideActivity extends BaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         if (item.getItemId() == R.id.search) {
-            search();
-            return true;
+
+
+
+        return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -93,16 +116,15 @@ public class DivideActivity extends BaseActivity {
     }
 
     //  搜索文件
-    public void search() {
+    public void search(String Keyextend) {
         // 关闭搜索软键盘
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm != null) {
             imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
         }
         // 检测搜索文本是否为空
-
         EditText searchInput = findViewById(R.id.search_input);
-        searchInput.setText("a");
+        searchInput.setText(Keyextend);
         if (StringUtils.isBlank(searchInput.getText())) {
             return;
         }

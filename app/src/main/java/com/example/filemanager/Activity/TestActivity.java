@@ -104,9 +104,38 @@ public class TestActivity extends AppCompatActivity {
 
         //为button绑定事件
         mFileTextView.setOnClickListener(new View.OnClickListener() {
+            String Choice="mFileTextView";
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(TestActivity.this, DivideActivity.class);
+                intent.putExtra("PassWord",Choice);
+                startActivity(intent);
+            }
+        });
+        mVideoTextView.setOnClickListener(new View.OnClickListener() {
+            String Choice="mVideoTextView";
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TestActivity.this, DivideActivity.class);
+                intent.putExtra("PassWord",Choice);
+                startActivity(intent);
+            }
+        });
+        mAudioTextView.setOnClickListener(new View.OnClickListener() {
+            String Choice="mAudioTextView";
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TestActivity.this, DivideActivity.class);
+                intent.putExtra("PassWord",Choice);
+                startActivity(intent);
+            }
+        });
+        mOtherTextView.setOnClickListener(new View.OnClickListener() {
+            String Choice="mOtherTextView";
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TestActivity.this, DivideActivity.class);
+                intent.putExtra("PassWord",Choice);
                 startActivity(intent);
             }
         });
