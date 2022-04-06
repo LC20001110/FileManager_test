@@ -85,7 +85,7 @@ public class TestActivity extends AppCompatActivity {
     private TextView mMobileMemoryTextView;
     private TextView mSDCardTextView;
     private LinearLayout mSDCardLinearLayout;
-
+    String Choice;
     private String mSDCardPath;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,38 +104,39 @@ public class TestActivity extends AppCompatActivity {
 
         //为button绑定事件
         mFileTextView.setOnClickListener(new View.OnClickListener() {
-            String Choice="mFileTextView";
+            //String Choice="mFileTextView";
             @Override
             public void onClick(View v) {
+                Bundle bundle = new Bundle();
                 Intent intent = new Intent(TestActivity.this, DivideActivity.class);
-                intent.putExtra("PassWord",Choice);
+                DivideActivity.Choice="mFileTextView";
                 startActivity(intent);
             }
         });
         mVideoTextView.setOnClickListener(new View.OnClickListener() {
-            String Choice="mVideoTextView";
+
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(TestActivity.this, DivideActivity.class);
-                intent.putExtra("PassWord",Choice);
+                DivideActivity.Choice="mVideoTextView";
                 startActivity(intent);
             }
         });
         mAudioTextView.setOnClickListener(new View.OnClickListener() {
-            String Choice="mAudioTextView";
+
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(TestActivity.this, DivideActivity.class);
-                intent.putExtra("PassWord",Choice);
+                DivideActivity.Choice="mAudioTextView";
                 startActivity(intent);
             }
         });
         mOtherTextView.setOnClickListener(new View.OnClickListener() {
-            String Choice="mOtherTextView";
+
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(TestActivity.this, DivideActivity.class);
-                intent.putExtra("PassWord",Choice);
+                DivideActivity.Choice="mOtherTextView";
                 startActivity(intent);
             }
         });
