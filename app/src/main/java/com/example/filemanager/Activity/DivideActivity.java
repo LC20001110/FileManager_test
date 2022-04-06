@@ -60,14 +60,6 @@ public class DivideActivity extends MainActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         EditText searchInput = findViewById(R.id.search_input);
         searchInput.setVisibility(View.INVISIBLE);
-        switch (Password){
-            case "mFileTextView":
-                search("doc");
-                search("txt");
-            case "mVideoTextView":
-                search("mp3");
-
-        }
         if(Password=="mFileTextView"){
         search("doc");
         search("txt");
