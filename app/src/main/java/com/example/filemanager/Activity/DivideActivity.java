@@ -26,7 +26,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.File;
 import java.util.ArrayList;
 
-public class DivideActivity extends MainActivity {
+public class DivideActivity<Temporary> extends MainActivity {
 
     private AsyncTask searchTask = null;
     protected static String Choice;
@@ -47,7 +47,7 @@ public class DivideActivity extends MainActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         EditText searchInput = findViewById(R.id.search_input);
         searchInput.setVisibility(View.INVISIBLE);
-<<<<<<<<< Temporary merge branch 1
+
         if(Choice=="mFileTextView"){
         search(".doc");
         search(".txt");
@@ -75,26 +75,9 @@ public class DivideActivity extends MainActivity {
             search(".gif");
 
         }
-=========
-        switch (Password){
-            case "mFileTextView":
-                search("doc");
-                search("txt");
-            case "mVideoTextView":
-                search("mp3");
 
-        }
-        if(Password=="mFileTextView"){
-        search("doc");
-        search("txt");
-        }else{search("txt");}
->>>>>>>>> Temporary merge branch 2
-        searchInput.setOnEditorActionListener((textView, i, keyEvent) -> {
-            if (i == EditorInfo.IME_ACTION_SEARCH) {
 
-            }
-            return true;
-        });
+
 
         FloatingActionMenu fab = findViewById(R.id.fab);
         fab.setVisibility(View.GONE);
