@@ -29,27 +29,14 @@ import java.util.ArrayList;
 public class DivideActivity extends MainActivity {
 
     private AsyncTask searchTask = null;
-    String Password;
-    @Override
-    protected void onResume() {
-        super.onResume();
-        getBundleInfo();
-    }
-    private void getBundleInfo() {
-        Bundle req=getIntent().getExtras();
-        //取出intent中附加的数据,通过 键值对 来传递
-        String a11=req.getString("a1");
-        String a22=req.getString("a2");
+    protected static String Choice;
 
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setIntent(savedInstanceState);
-        Intent intent = getIntent(); //String data = intent.getStringExtra("extra_data");
-        Password = intent.getStringExtra("PassWord");
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(path);
 
@@ -60,18 +47,33 @@ public class DivideActivity extends MainActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         EditText searchInput = findViewById(R.id.search_input);
         searchInput.setVisibility(View.INVISIBLE);
-        switch (Password){
-            case "mFileTextView":
-                search("doc");
-                search("txt");
-            case "mVideoTextView":
-                search("mp3");
+        if(Choice=="mFileTextView"){
+        search(".doc");
+        search(".txt");
+        search(".ppt");
+        search(".xls");
+        search(".pptx");
+        search(".xlsx");
+        search(".docx");
+            search(".pdf");
+        }else if(Choice=="mVideoTextView"){
+            search(".mp4");
+            search(".avi");
+            search(".swf");
+            search(".wmv");
+        }
+        else if(Choice=="mAudioTextView"){
+            search(".mp3");
+            search(".wav");
+            search(".mid");
+        }
+        else if(Choice=="mOtherTextView"){
+            search(".jpg");
+            search(".jpeg");
+            search(".png");
+            search(".gif");
 
         }
-        if(Password=="mFileTextView"){
-        search("doc");
-        search("txt");
-        }else{search("txt");}
         searchInput.setOnEditorActionListener((textView, i, keyEvent) -> {
             if (i == EditorInfo.IME_ACTION_SEARCH) {
 
