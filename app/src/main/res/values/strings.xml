@@ -18,7 +18,8 @@
   <string name="rc_ac_file_manager_category_file">文档</string>
   <string name="rc_ac_file_manager_category_video">视频</string>
   <string name="rc_ac_file_manager_category_audio">音频</string>
-  <string name="rc_ac_file_manager_category_picture">其他</string>
+
+  <string name="rc_ac_file_manager_category_picture">图片</string>
   <string name="rc_ac_file_manager_dir_title">按目录查找</string>
   <string name="rc_ac_file_manager_mobile_memory">手机内存</string>
   <string name="rc_ac_file_manager_SD_card">SD卡</string>
