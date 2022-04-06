@@ -70,6 +70,16 @@ public class FileViewAdapter extends RecyclerView.Adapter<FileViewAdapter.ViewHo
     fileTypeIconMap.put("mp4", R.drawable.filetype_mp4);
     fileTypeIconMap.put("jpg", R.drawable.filetype_jpg);
     fileTypeIconMap.put("png", R.drawable.filetype_png);
+    fileTypeIconMap.put("doc",R.drawable.doc);
+    fileTypeIconMap.put("docx",R.drawable.docx);
+    fileTypeIconMap.put("gif",R.drawable.gif);
+    fileTypeIconMap.put("css",R.drawable.css);
+    fileTypeIconMap.put("exe",R.drawable.exe);
+    fileTypeIconMap.put("htm",R.drawable.htm);
+    fileTypeIconMap.put("html",R.drawable.html);
+    fileTypeIconMap.put("ppt",R.drawable.ppt);
+    fileTypeIconMap.put("rar",R.drawable.rar);
+
   }
 
   // 获取当前选中的所有文件

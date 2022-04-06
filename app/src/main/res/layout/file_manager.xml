@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="3dp"
-                android:text="@string/rc_ac_file_send_preview"
+                android:text="@string/rc_ac_file_download_preview"
                 android:textColor="#ffffff"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -101,7 +101,9 @@
 
             <ImageView
                 style="@style/rc_ac_file_manager_image_style"
-                android:src="@mipmap/rc_ac_other_file_icon" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/aigei_com5" />
 
             <TextView
                 android:id="@+id/rc_ac_tv_file_manager_picture"
