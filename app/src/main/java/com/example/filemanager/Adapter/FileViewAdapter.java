@@ -64,12 +64,12 @@ public class FileViewAdapter extends RecyclerView.Adapter<FileViewAdapter.ViewHo
     //  各种文件类型的icon
     fileTypeIconMap.put("unknown", R.drawable.filetype_unknow);
     fileTypeIconMap.put("folder", R.drawable.filetype_folder);
-    fileTypeIconMap.put("txt", R.drawable.filetype_txt);
-    fileTypeIconMap.put("pdf", R.drawable.filetype_pdf);
-    fileTypeIconMap.put("mp3", R.drawable.filetype_mp3);
-    fileTypeIconMap.put("mp4", R.drawable.filetype_mp4);
-    fileTypeIconMap.put("jpg", R.drawable.filetype_jpg);
-    fileTypeIconMap.put("png", R.drawable.filetype_png);
+    fileTypeIconMap.put("txt", R.drawable.txt);
+    fileTypeIconMap.put("pdf", R.drawable.pdf);
+    fileTypeIconMap.put("mp3", R.drawable.mp3);
+    fileTypeIconMap.put("mp4", R.drawable.mp4);
+    fileTypeIconMap.put("jpg", R.drawable.jpg);
+    fileTypeIconMap.put("png", R.drawable.png);
     fileTypeIconMap.put("doc",R.drawable.doc);
     fileTypeIconMap.put("docx",R.drawable.docx);
     fileTypeIconMap.put("gif",R.drawable.gif);

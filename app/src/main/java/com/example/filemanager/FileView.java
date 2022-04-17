@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.Locale;
 
 /**
- * @author Hibiscus_L
+ * @author
  * */
 public class FileView {
   private final String fileName;  //  文件名称
