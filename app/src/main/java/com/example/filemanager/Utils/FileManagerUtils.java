@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.concurrent.*;
 
 /**
- * @author gaofan
+ * @author
  */
 public class FileManagerUtils {
   public static final FileManagerUtils Instance = new FileManagerUtils();
