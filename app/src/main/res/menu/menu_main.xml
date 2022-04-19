@@ -19,6 +19,9 @@
           android:id="@+id/show_ext"
           android:title="@string/showExt"
           android:checkable="true"/>
+  <item
+        android:id="@+id/select_mode"
+        android:title="多选"/>
 
   <item
           android:orderInCategory="100"
