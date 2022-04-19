@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 /**
- * @author gaofan
+ * @author
  * 处理拖拽功能的类
  */
 public class ItemTouchCallBack extends ItemTouchHelper.Callback{
