@@ -203,14 +203,7 @@ public class FileViewAdapter extends RecyclerView.Adapter<FileViewAdapter.ViewHo
     });
 
     //  长按时的回调函数，若不处于多选模式下，则打开多选模式，并将长按的文件加入选择列表
-    holder.fileView.setOnLongClickListener(view -> {
-      if (!selectMode) {
-        checkStates.put(position, true);
-        selectSet.add(fileList.get(position));
-        goSelectMode();
-      }
-      return true;
-    });
+
   }
 
 
