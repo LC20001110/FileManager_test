@@ -104,7 +104,6 @@ public class MainActivity extends BaseActivity {
 
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
-    //  进入搜索页面
     if (item.getItemId() == R.id.search) {
       Intent intent = new Intent(this, SearchActivity.class);
       intent.putExtra("path", path);
