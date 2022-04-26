@@ -170,6 +170,9 @@ public abstract class BaseActivity extends AppCompatActivity {
       case R.id.select_all://全选
         adapter.selectAll();
         return true;
+      case R.id.select_mode://多选
+        adapter.goSelectMode();
+        return true;
     }
     return super.onOptionsItemSelected(item);
   }

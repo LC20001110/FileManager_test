@@ -13,6 +13,9 @@
           android:id="@+id/select_all"
           android:title="@string/select_all"/>
   <item
+    android:id="@+id/select_mode"
+    android:title="@string/select_mode"/>
+  <item
         android:id="@+id/paste"
         android:title="@string/paste"/>
   <item
